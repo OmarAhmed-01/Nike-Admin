@@ -1,0 +1,124 @@
+.navbar-container{
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navbar-container .logo a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+.items ul{
+    display: flex;
+    list-style: none;
+    gap: 100px;
+    margin-left: -100px;
+}
+.items a{
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.navbar-menu a:hover::after {
+    position: absolute;
+    height: 2px;
+    margin: 0 auto;
+    content: '';
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: #000;
+    background-color: rgb(0, 0, 0);
+    left: 0;
+    bottom: -10px;
+}
+.admin-details{
+    display: flex;
+}
+.menu{
+    display: none;
+}
+.open-menu{
+    display: none;
+}
+.menuClosed{
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .navbar-container{
+        position: relative;
+    }
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 70%;
+    }
+    .logo img{
+        height: 70px;
+        width: 70px;
+    }
+    .logo h1{
+        font-size: 20px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 150px;
+        padding: 25px 25px;
+        background-color: black;
+        color: white;
+        filter: opacity(0.75);
+    }
+    .menu img{
+        width: 50px;
+    }
+    .menu-list{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .items{
+        display: none;
+    }
+    .admin-details{
+        display: none;
+    }
+    .navbar-menu-items{
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+    }
+    .navbar-menu-items{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menuClosed{
+        display: none;
+    }
+    .menuOpen{
+        display: block;
+    }
+    .open-menu{
+        display: flex;
+        width: 50px;
+        height: 50px;
+    }
+}
